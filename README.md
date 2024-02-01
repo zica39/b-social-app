@@ -98,6 +98,6 @@ npm start
 
 ## Postman Collection
 
-Exported Postman collection: [BSocial API-s.postman_collection](path/to/BSocial%20API-s.postman_collection.json)
+Exported Postman collection: [BSocial API-s.postman_collection](BSocial%20API-s.postman_collection.json)
 
 Feel free to adjust the configuration or customize the project according to your needs. For any questions, contact the project author: Zeljko Ivanovic.
