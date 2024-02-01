@@ -1,0 +1,17 @@
+{
+  "name": "kafka-to-elasticsearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "kafkaToElasticsearch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zeljko Ivanovic",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.17.13",
+    "elasticsearch": "^16.7.3",
+    "express": "^4.18.2",
+    "kafkajs": "^2.2.4"
+  }
+}
