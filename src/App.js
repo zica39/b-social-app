@@ -85,7 +85,9 @@ function App() {
 
         console.log(response.data)
 
-    
+        dispatch({ type: "GET_USERS", payload: response.data });
+        dispatch({ type: "GET_FOLLOWING" });
+        dispatch({ type: "USER_TO_FOLLOW" });
       } catch (e) {
         console.log(e);
       }
@@ -105,7 +107,7 @@ function App() {
         });
 
         const responseData = response.data.rows.length ? response.data.rows : [];
-    
+        dispatch({ type: "GET_POSTS", payload: responseData });
         setLoading(false);
       } catch (e) {
         console.log(e);
