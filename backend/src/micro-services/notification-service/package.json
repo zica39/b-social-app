@@ -4,6 +4,7 @@
   "description": "microservice for sending comment notifications",
   "main": "comment-notification-service.js",
   "scripts": {
+	"start": "node comment-notification-service.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zeljko Ivanovic",
