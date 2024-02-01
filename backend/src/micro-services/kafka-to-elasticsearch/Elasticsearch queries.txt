@@ -1,0 +1,78 @@
+Query that returns the number of logged-in players each day:
+{
+  "size": 0,
+  "aggs": {
+    "daily_signups": {
+      "date_histogram": {
+        "field": "registrationDate",
+        "calendar_interval": "day"
+      }
+    }
+  }
+}
+
+Query that returns the top 10 posts (by the number of comments) each day in the last 10 days:
+{
+  "size": 0,
+  "query": {
+    "range": {
+      "timeStamp": {
+        "gte": "now-10d/d",
+        "lte": "now/d"
+      }
+    }
+  },
+  "aggs": {
+    "daily_top_posts": {
+      "date_histogram": {
+        "field": "timeStamp",
+        "calendar_interval": "day"
+      },
+      "aggs": {
+        "top_posts": {
+          "terms": {
+            "field": "postId",
+            "size": 10,
+            "order": {
+              "comments_count": "desc"
+            }
+          },
+          "aggs": {
+            "comments_count": {
+              "cardinality": {
+                "field": "id"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+Query that returns the latest post for each user:
+{
+  "size": 0,
+  "aggs": {
+    "latest_posts": {
+      "terms": {
+        "field": "username",
+        "size": 10
+      },
+      "aggs": {
+        "latest_post": {
+          "top_hits": {
+            "size": 1,
+            "sort": [
+              {
+                "timeStamp": {
+                  "order": "desc"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
