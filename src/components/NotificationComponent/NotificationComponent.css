@@ -1,0 +1,43 @@
+.notification-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notification-item:hover {
+    background-color: #f7f7f7;
+}
+
+.notification-text {
+    flex: 1;
+}
+
+.close-button {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #e74c3c; /* or your preferred color */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.close-button span {
+    margin-right: 5px;
+}
