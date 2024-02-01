@@ -4,6 +4,7 @@
   "description": "",
   "main": "kafkaToElasticsearch.js",
   "scripts": {
+	 "start": "node kafkaToElasticsearch.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zeljko Ivanovic",
